@@ -1,0 +1,62 @@
+[
+  {
+    "id": "1",
+    "name": "T-shirt",
+    "price": 59.95,
+    "originalPrice": 99.95,
+    "quantity": 2,
+    "params": [
+      {
+        "Size": "M",
+        "Color": "Red",
+        "Pattern": "Floral"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Dress",
+    "price": 80.55,
+    "originalPrice": 100.55,
+    "quantity": 1,
+    "params": [
+      {
+        "Size": "L",
+        "Color": "Blue",
+        "Pattern": "Solid"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Backpack",
+    "price": 120.5,
+    "originalPrice": 160.5,
+    "quantity": 1,
+    "params": []
+  },
+  {
+    "id": "4",
+    "name": "Backpack",
+    "price": 120.5,
+    "originalPrice": 160.5,
+    "quantity": 1,
+    "params": []
+  },
+  {
+    "id": "5",
+    "name": "Backpack",
+    "price": 120.5,
+    "originalPrice": 160.5,
+    "quantity": 1,
+    "params": []
+  },
+  {
+    "id": "6",
+    "name": "Backpack",
+    "price": 120.5,
+    "originalPrice": 160.5,
+    "quantity": 1,
+    "params": []
+  }
+]
