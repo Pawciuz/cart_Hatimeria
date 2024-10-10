@@ -6,7 +6,7 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        top: '0 -4px 10px rgba(0, 0, 0, 0.2)', // cień tylko na górze
+        top: '0 -4px 10px rgba(0, 0, 0, 0.2)',
       },
       colors: {
         background: 'hsl(var(--background))',

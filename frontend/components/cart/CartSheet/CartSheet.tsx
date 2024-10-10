@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/Sheet';
-import CartItemCard from '@/components/cart/CartItemCard'; // Importuj komponent CartItemCard
+import CartItemCard from '@/components/cart/CartItemCard';
 import { CartItem } from '@/lib/api/Cart';
-import { X } from 'lucide-react';
+import { ShoppingCart, X } from 'lucide-react';
 import { ScrollArea } from '@/components/ui/ScrollArea';
 import { removeCartItem } from '@/lib/api/Cart/methods';
 import { useToast } from '@/hooks/use-toast';
@@ -24,13 +24,12 @@ const CartSheet = ({ initialCartItems }: CartSheetProps) => {
     try {
       const res = await removeCartItem(item.id);
 
+      setCartItems((prevItems) => prevItems.filter((i) => i.id !== item.id));
       toast({
         description: res,
         duration: 2000,
         variant: 'success',
       });
-
-      setCartItems((prevItems) => prevItems.filter((i) => i.id !== item.id));
     } catch {
       toast({
         description: 'Wystąpił błąd podczas usuwania produktu',
@@ -43,7 +42,9 @@ const CartSheet = ({ initialCartItems }: CartSheetProps) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open Cart</Button>
+        <Button variant="outline">
+          <ShoppingCart />
+        </Button>
       </SheetTrigger>
       <SheetContent className="w-screen p-0 sm:w-[36%] sm:min-w-[460px] sm:max-w-[520px]">
         <SheetHeader>
