@@ -1,8 +1,11 @@
-'use client';
-import CartItemCard from '@/components/cart/CartItemCard/CartItemCard';
-import CartSheet from '@/components/cart/CartSheet/CartSheet';
-import { useState } from 'react';
+import CartSheet from '@/components/cart/CartSheet';
+import { Suspense } from 'react';
 
-export default function Home() {
-  return <CartSheet />;
-}
+const Home = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CartSheet />
+    </Suspense>
+  );
+};
+export default Home;
